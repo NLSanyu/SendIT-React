@@ -8,6 +8,7 @@ import '../styles/App.css';
 import HomePage from './HomePage';
 import SignUpPage from './SignUpPage';
 import LogInPage from './LogInPage';
+import ProfilePage from './ProfilePage';
 
 class App extends Component {
   render() {
@@ -19,12 +20,16 @@ class App extends Component {
               component={HomePage}
           />
           <Route
-              exact path='/signup'
+              path='/signup'
               component={SignUpPage}
           />
           <Route
-              exact path='/login'
+              path='/login'
               component={LogInPage}
+          />
+          <Route
+              path='/profile'
+              component={ProfilePage}
           />
         </Switch>
       </Router>
