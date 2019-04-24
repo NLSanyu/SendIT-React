@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { signUp } from "../../actions/SignUpAction";
-import Loader from "../../components/Loader";
+import { signUp } from "../actions/SignUpAction";
+import Loader from "../components/Loader";
 
 export class SignUpPage extends Component {
   constructor(props) {

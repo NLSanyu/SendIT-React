@@ -6,7 +6,8 @@ import {
 } from 'react-router-dom';
 import '../styles/App.css';
 import HomePage from './HomePage';
-import SignUpPage from './SignUp/SignUpPage';
+import SignUpPage from './SignUpPage';
+import LogInPage from './LogInPage';
 
 class App extends Component {
   render() {
@@ -20,6 +21,10 @@ class App extends Component {
           <Route
               exact path='/signup'
               component={SignUpPage}
+          />
+          <Route
+              exact path='/login'
+              component={LogInPage}
           />
         </Switch>
       </Router>

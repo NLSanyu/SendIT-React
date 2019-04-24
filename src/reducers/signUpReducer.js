@@ -1,7 +1,7 @@
 import { SIGNUP_SUCCESS, SIGNUP_FAIL } from "../actions/types";
 
 const initialState = {
-  signedUp: true
+  signedUp: false
 };
 
 const signUpReducer = (state = initialState, action) => {
