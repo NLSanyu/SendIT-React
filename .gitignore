@@ -23,6 +23,7 @@ coverage
 
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
+.idea/
 
 # Bower dependency directory (https://bower.io/)
 bower_components
@@ -36,6 +37,7 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+package-lock.json
 
 # TypeScript v1 declaration files
 typings/
@@ -54,3 +56,9 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# files
+dist/
+
+
+tests/reporting/__snapshots__/

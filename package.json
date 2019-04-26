@@ -1,26 +1,32 @@
 {
-  "name": "ah-groot-frontend",
+  "name": "sendit-react",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "10.15.1"
+  },
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
     "lint": "eslint .",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --collectCoverage"
+    "test:coverage": "jest --collectCoverage",
+    "coverage": "react-scripts test -u --env=jsdom --coverage --coveragePathIgnorePatterns=src/index.js",
+    "heroku-postbuild": "npm run build"
   },
+  "heroku-run-build-script": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andela/ah-groot-frontend.git"
+    "url": "git+https://github.com//NLSanyu/SendIT-React.git"
   },
   "author": "Groot",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/andela/ah-groot-frontend/issues"
+    "url": "https://github.com/github.com//NLSanyu/SendIT-React/issues"
   },
-  "homepage": "https://github.com/andela/ah-groot-frontend#readme",
+  "homepage": "https://github.com//NLSanyu/SendIT-React#readme",
   "keywords": [],
   "devDependencies": {
     "@babel/core": "^7.1.2",
