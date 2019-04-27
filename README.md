@@ -1,4 +1,5 @@
 # SendIT-React
+[![Build Status](https://travis-ci.org/NLSanyu/SendIT-React.svg?branch=develop)](https://travis-ci.org/NLSanyu/SendIT-React)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/c2baf96a32bf9586c37c/maintainability)](https://codeclimate.com/github/NLSanyu/SendIT-React/maintainability)
 
