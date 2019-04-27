@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { logIn } from "../actions/LoginAction";
 import Loader from "../components/Loader";
-
+import Button from "../components/Button";
 export class LogInPage extends Component {
   constructor(props) {
     super(props);
@@ -64,14 +64,13 @@ export class LogInPage extends Component {
               </tr>
             </tbody>
           </table>
-          <button
+          <Button
             type="button"
             className="submit-button"
             id="sign_up_btn"
+            text="Log In"
             onClick={this.handleLogIn}
-          >
-            Log In
-          </button>
+          />
         </form>
         <Loader />
       </div>

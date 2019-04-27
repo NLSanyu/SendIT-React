@@ -9,8 +9,10 @@ export const logIn = userInfo => dispatch => {
     .then(function(response) {
       dispatch({
         type: LOGGED_IN,
-        payload: true
+        loggedIn: true,
+        profileInfo: response.data.user_info
       });
+      sessionStorage.setItem('token', response.data.access_token);
       <Redirect to='/' />
 
     })

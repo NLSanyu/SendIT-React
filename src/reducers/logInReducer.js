@@ -1,7 +1,8 @@
 import { LOGGED_IN } from "../actions/types";
 
 const initialState = {
-  loggedIn: false
+  loggedIn: false,
+  profileInfo: []
 };
 
 const logInReducer = (state = initialState, action) => {
@@ -9,7 +10,8 @@ const logInReducer = (state = initialState, action) => {
     case LOGGED_IN:
       return {
         ...state,
-        loggedIn: true
+        loggedIn: action.loggedIn,
+        profileInfo: action.profileInfo
       };
     default:
       return state;
