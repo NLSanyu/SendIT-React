@@ -5,7 +5,7 @@ import {
   Switch
 } from 'react-router-dom';
 import '../styles/App.css';
-import HomePage from './HomePage';
+import HomePage from '../components/HomePage';
 import SignUpPage from './SignUpPage';
 import LogInPage from './LogInPage';
 import ProfilePage from './ProfilePage';

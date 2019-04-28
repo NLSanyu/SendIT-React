@@ -1,20 +1,34 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import CreateParcelForm from "./CreateParcelForm";
 import ParcelTable from "../components/ParcelTable";
-import { connect } from "react-redux";
+import { createNewParcel } from "../actions/ParcelActions";
 
 export class Parcels extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      description: "",
+      pickupLocation: "",
+      destination: ""
+    };
 
+    this.handleInputChange = this.handleInputChange.bind(this);
     this.createParcel = this.createParcel.bind(this);
     this.getParcels = this.getParcels.bind(this);
   }
 
-  createParcel = (event, description, pickup_location, destination) => {
-    // event.preventDefault;
-    // alert("createParcel");
+  handleInputChange = event => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
+
+  createParcel = event => {
+    const parcelInfo = {
+      description: this.state.description,
+      pickup_location: this.state.pickupLocation,
+      destination: this.state.destination
+    };
+    this.props.createNewParcel(parcelInfo);
   };
 
   getParcels = () => {
@@ -24,7 +38,10 @@ export class Parcels extends Component {
   render() {
     return (
       <div className="parcels-details" id="all-parcels">
-        <CreateParcelForm createParcel={this.createParcel} />
+        <CreateParcelForm
+          handleInputChange={this.handleInputChange}
+          createParcel={this.createParcel}
+        />
         <ParcelTable parcels={this.props.parcels} />
       </div>
     );
@@ -35,7 +52,9 @@ const mapStateToProps = state => ({
   parcels: state.parcels
 });
 
-const mapDispatchToProps = {};
+const mapDispatchToProps = {
+  createNewParcel
+};
 
 export default connect(
   mapStateToProps,

@@ -8,12 +8,10 @@ const authHeader = {
   }
 };
 
-export default endPoints;
-
 
 export const createNewParcel = parcelInfo => dispatch => {
   return axios
-    .post("'https://nls-sendit.herokuapp.com/api/v1/parcels", parcelInfo, authHeader)
+    .post("https://nls-sendit.herokuapp.com/api/v1/parcels", parcelInfo, authHeader)
     .then(function(response) {
       dispatch({
         type: PARCEL_CREATED,
