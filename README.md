@@ -1,9 +1,5 @@
 # SendIT-React
-[![Build Status](https://travis-ci.org/NLSanyu/SendIT-React.svg?branch=develop)](https://travis-ci.org/NLSanyu/SendIT-React)
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/c2baf96a32bf9586c37c/maintainability)](https://codeclimate.com/github/NLSanyu/SendIT-React/maintainability)
-
-[![Test Coverage](https://api.codeclimate.com/v1/badges/c2baf96a32bf9586c37c/test_coverage)](https://codeclimate.com/github/NLSanyu/SendIT-React/test_coverage)
+[![Build Status](https://travis-ci.org/NLSanyu/SendIT-React.svg?branch=develop)](https://travis-ci.org/NLSanyu/SendIT-React) [![Maintainability](https://api.codeclimate.com/v1/badges/c2baf96a32bf9586c37c/maintainability)](https://codeclimate.com/github/NLSanyu/SendIT-React/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/c2baf96a32bf9586c37c/test_coverage)](https://codeclimate.com/github/NLSanyu/SendIT-React/test_coverage)
 
 # SendIT
 
@@ -17,30 +13,27 @@ These instructions will get you a copy of the project up and running on your loc
 The hosting link for the staging app on Heroku is: https://nls-sendit-react.herokuapp.com/
 
 
-### Prerequisites
-A modern web browser
+## Technology Stack
+
+- React
+- SCSS
+- Redux
+- Webpack
+- Jest
+- Enzyme
 
 
-## Installation and Deployment
-```
-Copy the link for cloning this repository from the "Clone or download button"
-Create a folder on your computer
-Open the terminal or git bash
-Enter these commands:
-  $ cd YourFolder
-  $ git clone <the clone link you copied>
-Open YourFolder
-Navigate to UI/templates/user/index.html
-Open it in a text editor
-Click on Run and choose a web browser
-```
+## Installation
+1. Install [`Node JS`](https://nodejs.org/en/).
+2. To clone, run `git clone https://github.com/NLSanyu/SendIT-React.git`.
+3. `cd` into the root of the **project directory**.
+4. Run `npm install` on the terminal to install dependecies.
+6. Setup local development server.
+7. To start the application run `npm start`
 
 
-## Built With
-
-* HTML
-* CSS
-* Javascript
+## Testing
+Run `npm run test` on the terminal while within the project root directory. U
 
 
 ## Authors

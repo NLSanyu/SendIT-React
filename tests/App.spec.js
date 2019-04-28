@@ -10,6 +10,8 @@ import ProfilePage from "../src/containers/ProfilePage";
 import HomePage from "../src/components/HomePage";
 import Header from "../src/components/Header";
 import NavBar from "../src/components/NavBar";
+import Loader from "../src/components/Loader";
+
 
 describe("App", () => {
   const initialState = {};
@@ -64,6 +66,11 @@ describe("App", () => {
 
   it("should render nav bar without crashing", () => {
     const wrapper = shallow(<NavBar />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it("should render loader without crashing", () => {
+    const wrapper = shallow(<Loader />);
     expect(wrapper).toMatchSnapshot();
   });
 

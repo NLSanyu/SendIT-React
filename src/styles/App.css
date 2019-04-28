@@ -496,7 +496,6 @@ h4 > a:hover {
 }
 
 .loader {
-  display: none;
   border: 8px solid var(--main-semi-dark-color);
   border-top: 8px solid var(--main-dark-color);
   border-radius: 50%;

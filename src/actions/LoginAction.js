@@ -2,8 +2,7 @@ import { Redirect } from "react-router-dom";
 import axios from "axios";
 import { LOGGED_IN } from "./types";
 
-export const logIn = userInfo => dispatch => {
-  document.getElementById("load").style.display = "block";
+const logIn = userInfo => dispatch => {
   return axios
     .post("https://nls-sendit.herokuapp.com/api/v1/auth/login", userInfo)
     .then(function(response) {
@@ -18,3 +17,5 @@ export const logIn = userInfo => dispatch => {
     })
     .catch(function(error) {});
 };
+
+export default logIn;

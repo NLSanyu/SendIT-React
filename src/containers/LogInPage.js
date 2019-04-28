@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { logIn } from "../actions/LoginAction";
+import logIn from "../actions/LoginAction";
 import Loader from "../components/Loader";
 import Button from "../components/Button";
 export class LogInPage extends Component {
@@ -8,7 +8,8 @@ export class LogInPage extends Component {
     super(props);
     this.state = {
       username: "",
-      password: ""
+      password: "",
+      showLoader: false
     };
 
     this.handleLogIn = this.handleLogIn.bind(this);
@@ -25,6 +26,7 @@ export class LogInPage extends Component {
       password: this.state.password
     };
     this.props.logIn(userInfo);
+    this.setState({ showLoader: true });
   };
 
   render() {
@@ -72,7 +74,7 @@ export class LogInPage extends Component {
             onClick={this.handleLogIn}
           />
         </form>
-        <Loader />
+        {this.state.showLoader ? <Loader /> : <div />}
       </div>
     );
   }

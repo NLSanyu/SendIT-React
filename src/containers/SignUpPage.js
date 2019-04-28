@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { signUp } from "../actions/SignUpAction";
+import signUp from "../actions/SignUpAction";
 import Loader from "../components/Loader";
 import Button from "../components/Button";
 
@@ -13,7 +13,8 @@ export class SignUpPage extends Component {
       email: "",
       phone_number: "",
       password1: "",
-      password2: ""
+      password2: "",
+      showLoader: false
     };
 
     this.handleSignUp = this.handleSignUp.bind(this);
@@ -133,7 +134,7 @@ export class SignUpPage extends Component {
             onClick={this.handleSignUp}
           />
         </form>
-        <Loader />
+        {this.state.showLoader ? <Loader /> : <div />}
       </div>
     );
   }

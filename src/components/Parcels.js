@@ -18,6 +18,10 @@ export class Parcels extends Component {
     this.getParcels = this.getParcels.bind(this);
   }
 
+  componentWillMount() {
+    this.props.getParcels;
+  }
+
   handleInputChange = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
