@@ -7,21 +7,22 @@
     "node": "10.15.1"
   },
   "scripts": {
-    "start": "webpack-dev-server --mode development --open --hot",
+    "start": "webpack-dev-server --mode development --open --hot --https",
     "build": "webpack --mode production",
     "lint": "eslint .",
-    "test": "jest",
+    "test": "jest -u",
     "test:watch": "jest --watch",
     "test:coverage": "jest --collectCoverage",
     "coverage": "react-scripts test -u --env=jsdom --coverage --coveragePathIgnorePatterns=src/index.js",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build ",
+    "heroku-prebuild": "npm install "
   },
   "heroku-run-build-script": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com//NLSanyu/SendIT-React.git"
   },
-  "author": "Groot",
+  "author": "Lydia",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/github.com//NLSanyu/SendIT-React/issues"
