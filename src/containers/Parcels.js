@@ -10,14 +10,15 @@ export class Parcels extends Component {
     this.state = {
       description: "",
       pickupLocation: "",
-      destination: ""
+      destination: "",
+      newParcel: false
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.createParcel = this.createParcel.bind(this);
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
     setTimeout(() => {
       this.props.getAllParcels(this.props.user.user_id);
     }, 2000);
@@ -34,6 +35,9 @@ export class Parcels extends Component {
       destination: this.state.destination
     };
     this.props.createNewParcel(parcelInfo);
+    this.setState({
+        newParcel: true
+    })
   };
 
   render() {

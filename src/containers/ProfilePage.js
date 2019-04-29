@@ -28,4 +28,6 @@ const mapStateToProps = state => ({
   user: state.logIn.user
 });
 
-export default connect(mapStateToProps)(ProfilePage);
+export default connect(
+  mapStateToProps,
+)(ProfilePage);

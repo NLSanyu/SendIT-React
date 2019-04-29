@@ -154,7 +154,6 @@ i {
   background-color: var(--main-light-color);
   padding: 20px;
   margin-bottom: 20px;
-  max-width: 500px;
 }
 
 .create-form button {
@@ -268,7 +267,7 @@ div#pop-up-info {
   justify-content: center;
   align-items: stretch;
   margin: 10px;
-  padding: 20px 10px;
+  padding: 20px 50px;
   width: 90%;
 }
 
@@ -281,17 +280,17 @@ img.profile-image {
 }
 
 .profile-details {
-  flex-grow: 3;
+  flex-grow: 4;
   background-color: var(--main-light-color);
   border-radius: 10px;
   padding: 30px 20px 10px 30px;
   margin: 5px 10px 5px 25px;
-  min-width: 210px;
-  max-width: 300px;
+  min-width: 250px;
+  max-width: 400px;
 }
 
 .parcels-details {
-  flex-grow: 7;
+  flex-grow: 6;
   padding-left: 10px;
   padding-right: 10px;
   margin: 5px 2px 0px 40px;
