@@ -9,21 +9,43 @@ export class CreateParcelForm extends Component {
       pickup_location: "",
       destination: ""
     };
-
   }
-
 
   render() {
     return (
       <div className="create-form-div">
         <h3>Create a new parcel</h3>
         <form className="create-form" id="create-parcel-form">
-          <label htmlFor="desc">Description:</label>
-          <input type="text" name="description" onChange={this.props.handleInputChange} />
-          <label htmlFor="pickup">Pickup Location:</label>
-          <input type="text" name="pickupLocation" onChange={this.props.handleInputChange} />
-          <label htmlFor="dest">Destination:</label>
-          <input type="text" name="destination" onChange={this.props.handleInputChange} />
+          <div>
+            <label htmlFor="desc" className="create-parcel-input">
+              Description:
+            </label>
+            <input
+              type="text"
+              name="description"
+              onChange={this.props.handleInputChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="pickup" className="create-parcel-input">
+              Pickup Location:
+            </label>
+            <input
+              type="text"
+              name="pickupLocation"
+              onChange={this.props.handleInputChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="dest" className="create-parcel-input">
+              Destination:
+            </label>
+            <input
+              type="text"
+              name="destination"
+              onChange={this.props.handleInputChange}
+            />
+          </div>
           <br />
           <Button
             type="button"

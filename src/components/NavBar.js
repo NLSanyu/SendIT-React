@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function NavBar() {
+const NavBar = (props) => {
   return (
     <div>
         <nav>
-            <Link to='/'>Home</Link>
-            <Link to='/login'>Log In</Link>
-            <Link to='/signup'>Sign Up</Link>
+            {props.home ? <Link to='/'>{props.home}</Link> : ''}
+            {props.login ? <Link to='/login'>{props.login}</Link> : ''}
+            {props.signup ? <Link to='/signup'>{props.signup}</Link> : ''}
         </nav>
     </div>
   )
 }
+
+export default NavBar;

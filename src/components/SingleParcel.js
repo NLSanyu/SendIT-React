@@ -1,10 +1,17 @@
 import React from "react";
 
-const SingleParcel = (props) => {
+const SingleParcel = props => {
   return (
-    <div className="profile-details">
-      <p>Single Parcel</p>
-    </div>
+    <tr>
+      <td>{props.id}</td>
+      <td>{props.dateCreated}</td>
+      <td>{props.description}</td>
+      <td>{props.pickupLocation}</td>
+      <td>{props.destination}</td>
+      <td>{props.price}</td>
+      <td>{props.status}</td>
+      <td className="view">View</td>
+    </tr>
   );
 };
 

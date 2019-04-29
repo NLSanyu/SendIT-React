@@ -10,8 +10,7 @@ const logInReducer = (state = initialState, action) => {
     case LOGGED_IN:
       return {
         ...state,
-        loggedIn: action.loggedIn,
-        profileInfo: action.profileInfo
+        profileInfo: action.payload
       };
     default:
       return state;

@@ -1,4 +1,3 @@
-import { Redirect } from "react-router-dom";
 import axios from "axios";
 import { LOGGED_IN } from "./types";
 
@@ -12,8 +11,6 @@ const logIn = userInfo => dispatch => {
         profileInfo: response.data.user_info
       });
       sessionStorage.setItem('token', response.data.access_token);
-      <Redirect to='/' />
-
     })
     .catch(function(error) {});
 };

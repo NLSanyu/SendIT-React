@@ -2,8 +2,7 @@ import React from "react";
 import SingleParcel from "./SingleParcel";
 
 const ParcelTable = props => {
-
-  const parcels = props.parcels ? props.parcels : [];
+  const parcels = props.parcels ? props.parcels : [{ id: "1" }];
   const parcelItems = parcels.map(parcel => (
     <SingleParcel
       key={parcel.id}
@@ -18,15 +17,27 @@ const ParcelTable = props => {
   ));
 
   return (
-    <div id="all-parcels" className="parcels_details">
+    <div className="parcel-details">
       <h3>My Parcels</h3>
-
-      <div className="parcels-div">
-        <ul>{parcelItems}</ul>
-      </div>
+      <table className="parcel-table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Date created</th>
+            <th>Description</th>
+            <th>Pickup location</th>
+            <th>
+              Destination <i class="fas fa-edit" />
+            </th>
+            <th>Price</th>
+            <th>Status</th>
+            <th />
+          </tr>
+        </thead>
+        <tbody>{parcelItems}</tbody>
+      </table>
     </div>
   );
-
 };
 
 export default ParcelTable;

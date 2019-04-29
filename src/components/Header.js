@@ -1,11 +1,13 @@
 import React from "react";
 import NavBar from "./NavBar";
 
-export default function Header() {
+const Header = (props) => {
   return (
     <div className="header">
       <p id="sendit">SendIT</p>
-      <NavBar />
+      <NavBar home={props.home} login={props.login} signup={props.signup} />
     </div>
   );
 }
+
+export default Header;

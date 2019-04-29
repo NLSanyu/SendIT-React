@@ -4,6 +4,7 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
 import '../styles/App.css';
 import HomePage from '../components/HomePage';
 import SignUpPage from './SignUpPage';
@@ -13,7 +14,7 @@ import ProfilePage from './ProfilePage';
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router history={createBrowserHistory}>
         <Switch>
           <Route
               exact path='/'

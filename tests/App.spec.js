@@ -33,7 +33,7 @@ describe("App", () => {
   });
 
   it("sign up page should render without crashing", () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <Provider store={store}>
         <SignUpPage />
       </Provider>
@@ -42,7 +42,7 @@ describe("App", () => {
   });
 
   it("log in page should render without crashing", () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <Provider store={store}>
         <LogInPage />
       </Provider>
@@ -51,7 +51,7 @@ describe("App", () => {
   });
 
   it("profile page should render without crashing", () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <Provider store={store}>
         <ProfilePage />
       </Provider>

@@ -5,7 +5,7 @@ import logInReducer from './logInReducer';
 import parcelsReducer from './parcelsReducer';
 
 export default combineReducers({
-  signUpReducer,
-  logInReducer,
-  parcelsReducer,
+  signUp: signUpReducer,
+  logIn: logInReducer,
+  parcels: parcelsReducer,
 });

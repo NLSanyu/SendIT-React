@@ -4,7 +4,7 @@ import Header from "./Header";
 export const HomePage = () => {
   return (
     <div>
-      <Header />
+      <Header home="Home" login="Log In" signup="Create an account" />
       <div className="home-image">
         <img className="home-image" src="../assets/parcel.jpg" />
       </div>

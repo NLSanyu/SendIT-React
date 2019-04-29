@@ -1,15 +1,6 @@
 {
-    "addons": [
-
-    ],
-    "buildpacks": [
-      {
-        "url": "heroku/nodejs"
-      },
-      {
-        "url": "https://github.com/hone/heroku-buildpack-static"
-      }
-    ],
+    "name": "SendIT-React",
+    "scripts": {},
     "env": {
     },
     "formation": {
@@ -17,8 +8,10 @@
         "quantity": 1
       }
     },
-    "name": "send-it-react",
-    "scripts": {
-    },
-    "stack": "heroku-18"
+    "addons": [],
+    "buildpacks": [
+      {
+        "url": "heroku/nodejs"
+      }
+    ]
   }

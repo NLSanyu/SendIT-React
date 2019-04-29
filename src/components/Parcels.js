@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import CreateParcelForm from "./CreateParcelForm";
 import ParcelTable from "../components/ParcelTable";
-import { createNewParcel } from "../actions/ParcelActions";
+import { createNewParcel, getAllParcels } from "../actions/ParcelActions";
 
 export class Parcels extends Component {
   constructor(props) {
@@ -19,14 +19,15 @@ export class Parcels extends Component {
   }
 
   componentWillMount() {
-    this.props.getParcels;
+    console.log(this.props.profileInfo);
+    this.props.getAllParcels(5);
   }
 
   handleInputChange = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
 
-  createParcel = event => {
+  createParcel = () => {
     const parcelInfo = {
       description: this.state.description,
       pickup_location: this.state.pickupLocation,
@@ -36,7 +37,7 @@ export class Parcels extends Component {
   };
 
   getParcels = () => {
-    // alert("getParcels");
+    this.props.getParcels(this.props.profileInfo.user_id);
   };
 
   render() {
@@ -53,11 +54,13 @@ export class Parcels extends Component {
 }
 
 const mapStateToProps = state => ({
-  parcels: state.parcels
+  parcels: state.parcels.parcels,
+  logIn: state.profileInfo
 });
 
 const mapDispatchToProps = {
-  createNewParcel
+  createNewParcel,
+  getAllParcels
 };
 
 export default connect(

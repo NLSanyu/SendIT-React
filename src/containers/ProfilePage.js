@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import Profile from "../components/Profile";
 import Parcels from "../components/Parcels";
+import Header from "../components/Header";
 export class ProfilePage extends Component {
   constructor(props) {
     super(props);
@@ -10,16 +11,19 @@ export class ProfilePage extends Component {
 
   render() {
     return (
-      <div className="flex-container-profile">
-        <Profile profile={''} />
-        <Parcels />
+      <div>
+        <Header home="Home" />
+        <div className="flex-container-profile">
+          <Profile profile={this.props.profileInfo} />
+          <Parcels />
+        </div>
       </div>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  profileInfo: state.profileInfo
+  profileInfo: state.logIn.profileInfo
 });
 
 export default connect(mapStateToProps)(ProfilePage);
