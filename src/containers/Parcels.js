@@ -20,8 +20,8 @@ export class Parcels extends Component {
 
   componentDidMount = () => {
     setTimeout(() => {
-      this.props.getAllParcels(this.props.user.user_id);
-    }, 2000);
+      this.props.getAllParcels(localStorage.getItem('user_id'));
+    }, 1000);
   }
 
   handleInputChange = event => {
