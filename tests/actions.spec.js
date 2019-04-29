@@ -63,7 +63,7 @@ describe("actions", () => {
         });
       });
 
-      const expectedActions = [{ type: types.LOGGED_IN, loggedIn: true }];
+      const expectedActions = [{ type: types.LOGGED_IN }];
 
       const store = mockStore({});
       return store.dispatch(logIn()).then(() => {

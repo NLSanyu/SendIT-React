@@ -1,8 +1,7 @@
 import { LOGGED_IN } from "../actions/types";
 
 const initialState = {
-  loggedIn: false,
-  profileInfo: []
+  user: []
 };
 
 const logInReducer = (state = initialState, action) => {
@@ -10,7 +9,7 @@ const logInReducer = (state = initialState, action) => {
     case LOGGED_IN:
       return {
         ...state,
-        profileInfo: action.payload
+        user: action.payload
       };
     default:
       return state;

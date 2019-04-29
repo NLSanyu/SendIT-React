@@ -22,13 +22,12 @@ export const createNewParcel = parcelInfo => dispatch => {
 };
 
 export const getAllParcels = (userId) => dispatch => {
-  console.log("user id: " + userId);
   return axios
     .get(`https://nls-sendit.herokuapp.com/api/v1/users/${userId}/parcels`, authHeader)
     .then(function(response) {
       dispatch({
         type: GET_ALL_PARCELS,
-        payload: response.data.parcels
+        payload: response.data.data
       });
     })
     .catch(function(error) {

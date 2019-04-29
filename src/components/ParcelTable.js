@@ -2,11 +2,11 @@ import React from "react";
 import SingleParcel from "./SingleParcel";
 
 const ParcelTable = props => {
-  const parcels = props.parcels ? props.parcels : [{ id: "1" }];
+  const parcels = props.parcels ? props.parcels : [];
   const parcelItems = parcels.map(parcel => (
     <SingleParcel
-      key={parcel.id}
-      id={parcel.id}
+      key={parcel.parcel_id}
+      id={parcel.parcel_id}
       dateCreated={parcel.date_created}
       description={parcel.description}
       pickupLocation={parcel.pickup_location}
@@ -26,9 +26,7 @@ const ParcelTable = props => {
             <th>Date created</th>
             <th>Description</th>
             <th>Pickup location</th>
-            <th>
-              Destination <i class="fas fa-edit" />
-            </th>
+            <th>Destination</th>
             <th>Price</th>
             <th>Status</th>
             <th />

@@ -10,11 +10,13 @@ export class ProfilePage extends Component {
   }
 
   render() {
+    const { user } = this.props;
+
     return (
       <div>
         <Header home="Home" />
         <div className="flex-container-profile">
-          <Profile profile={this.props.profileInfo} />
+          {user ? <Profile profile={user} /> : <h3>Loading...</h3>}
           <Parcels />
         </div>
       </div>
@@ -23,7 +25,7 @@ export class ProfilePage extends Component {
 }
 
 const mapStateToProps = state => ({
-  profileInfo: state.logIn.profileInfo
+  user: state.logIn.user
 });
 
 export default connect(mapStateToProps)(ProfilePage);

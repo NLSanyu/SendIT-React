@@ -15,12 +15,12 @@ export class Parcels extends Component {
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.createParcel = this.createParcel.bind(this);
-    this.getParcels = this.getParcels.bind(this);
   }
 
-  componentWillMount() {
-    console.log(this.props.profileInfo);
-    this.props.getAllParcels(5);
+  componentDidMount() {
+    setTimeout(() => {
+      this.props.getAllParcels(this.props.user.user_id);
+    }, 2000);
   }
 
   handleInputChange = event => {
@@ -34,10 +34,6 @@ export class Parcels extends Component {
       destination: this.state.destination
     };
     this.props.createNewParcel(parcelInfo);
-  };
-
-  getParcels = () => {
-    this.props.getParcels(this.props.profileInfo.user_id);
   };
 
   render() {
@@ -55,7 +51,7 @@ export class Parcels extends Component {
 
 const mapStateToProps = state => ({
   parcels: state.parcels.parcels,
-  logIn: state.profileInfo
+  user: state.logIn.user
 });
 
 const mapDispatchToProps = {

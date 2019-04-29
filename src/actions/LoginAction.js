@@ -7,10 +7,10 @@ const logIn = userInfo => dispatch => {
     .then(function(response) {
       dispatch({
         type: LOGGED_IN,
-        loggedIn: true,
-        profileInfo: response.data.user_info
+        payload: response.data.user_info
       });
       sessionStorage.setItem('token', response.data.access_token);
+      sessionStorage.setItem('user_id', response.data.user_info.user_id);
     })
     .catch(function(error) {});
 };
