@@ -2,16 +2,10 @@
 
 exports[`App app should render without crashing 1`] = `ShallowWrapper {}`;
 
-exports[`App home page should render without crashing 1`] = `ShallowWrapper {}`;
+exports[`App home page should render without crashing 1`] = `ReactWrapper {}`;
 
-exports[`App log in page should render without crashing 1`] = `ShallowWrapper {}`;
+exports[`App log in page should render without crashing 1`] = `ReactWrapper {}`;
 
-exports[`App profile page should render without crashing 1`] = `ShallowWrapper {}`;
+exports[`App profile page should render without crashing 1`] = `ReactWrapper {}`;
 
-exports[`App should render header without crashing 1`] = `ShallowWrapper {}`;
-
-exports[`App should render loader without crashing 1`] = `ShallowWrapper {}`;
-
-exports[`App should render nav bar without crashing 1`] = `ShallowWrapper {}`;
-
-exports[`App sign up page should render without crashing 1`] = `ShallowWrapper {}`;
+exports[`App sign up page should render without crashing 1`] = `ReactWrapper {}`;

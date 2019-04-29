@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Profile from "../components/Profile";
-import Parcels from "../components/Parcels";
+import Parcels from "./Parcels";
 import Header from "../components/Header";
 export class ProfilePage extends Component {
   constructor(props) {
@@ -14,7 +14,7 @@ export class ProfilePage extends Component {
 
     return (
       <div>
-        <Header home="Home" />
+        <Header home="Home" logout="Log out" />
         <div className="flex-container-profile">
           {user ? <Profile profile={user} /> : <h3>Loading...</h3>}
           <Parcels />

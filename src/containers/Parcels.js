@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import CreateParcelForm from "./CreateParcelForm";
+import CreateParcelForm from "../components/CreateParcelForm";
 import ParcelTable from "../components/ParcelTable";
 import { createNewParcel, getAllParcels } from "../actions/ParcelActions";
 

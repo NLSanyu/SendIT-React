@@ -10,10 +10,12 @@ import HomePage from '../components/HomePage';
 import SignUpPage from './SignUpPage';
 import LogInPage from './LogInPage';
 import ProfilePage from './ProfilePage';
+import { ToastContainer } from 'react-toastify';
 
 class App extends Component {
   render() {
     return (
+      <div>
       <Router history={createBrowserHistory}>
         <Switch>
           <Route
@@ -34,6 +36,8 @@ class App extends Component {
           />
         </Switch>
       </Router>
+      <ToastContainer />
+      </div>
     );
   }
 }

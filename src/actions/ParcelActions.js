@@ -1,12 +1,13 @@
 import axios from "axios";
 import { PARCEL_CREATED, GET_ALL_PARCELS } from "./types";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const authHeader = {
   headers: {
     'Authorization': 'Bearer ' + sessionStorage.token
   }
 };
-
 
 export const createNewParcel = parcelInfo => dispatch => {
   return axios
@@ -16,8 +17,10 @@ export const createNewParcel = parcelInfo => dispatch => {
         type: PARCEL_CREATED,
         payload: true
       });
+      toast("Parcel created");
     })
     .catch(function(error) {
+      toast("Failed to create parcel");
     });
 };
 

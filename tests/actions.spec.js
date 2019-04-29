@@ -97,6 +97,23 @@ describe("actions", () => {
       });
     });
 
+    it("should not create an action to create a parcel", () => {
+      moxios.wait(() => {
+        const request = moxios.requests.mostRecent();
+        request.respondWith({
+          status: 404,
+          response: data
+        });
+      });
+
+      const expectedActions = [];
+
+      const store = mockStore({});
+      return store.dispatch(parcelActions.createNewParcel()).then(() => {
+        expect(store.getActions()).toEqual(expectedActions);
+      });
+    });
+
     it("should create an action to get all parcels", () => {
       moxios.wait(() => {
         const request = moxios.requests.mostRecent();
@@ -113,5 +130,23 @@ describe("actions", () => {
         expect(store.getActions()).toEqual(expectedActions);
       });
     });
+
+    it("should not create an action to get all parcels", () => {
+      moxios.wait(() => {
+        const request = moxios.requests.mostRecent();
+        request.respondWith({
+          status: 404,
+          response: data
+        });
+      });
+
+      const expectedActions = [];
+
+      const store = mockStore({});
+      return store.dispatch(parcelActions.getAllParcels()).then(() => {
+        expect(store.getActions()).toEqual(expectedActions);
+      });
+    });
+
   });
 });

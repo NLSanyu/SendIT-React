@@ -1,5 +1,7 @@
 import axios from "axios";
 import { LOGGED_IN } from "./types";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const logIn = userInfo => dispatch => {
   return axios
@@ -12,7 +14,10 @@ const logIn = userInfo => dispatch => {
       sessionStorage.setItem('token', response.data.access_token);
       sessionStorage.setItem('user_id', response.data.user_info.user_id);
     })
-    .catch(function(error) {});
+    .catch(function(error) {
+      toast("Failed to log in - invalid data");
+    });
+
 };
 
 export default logIn;

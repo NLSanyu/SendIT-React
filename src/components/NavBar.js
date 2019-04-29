@@ -8,6 +8,7 @@ const NavBar = (props) => {
             {props.home ? <Link to='/'>{props.home}</Link> : ''}
             {props.login ? <Link to='/login'>{props.login}</Link> : ''}
             {props.signup ? <Link to='/signup'>{props.signup}</Link> : ''}
+            {props.logout ? <Link to='/'>{props.logout}</Link> : ''}
         </nav>
     </div>
   )

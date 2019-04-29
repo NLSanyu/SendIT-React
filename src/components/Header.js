@@ -5,7 +5,7 @@ const Header = (props) => {
   return (
     <div className="header">
       <p id="sendit">SendIT</p>
-      <NavBar home={props.home} login={props.login} signup={props.signup} />
+      <NavBar home={props.home} login={props.login} signup={props.signup} logout={props.logout} />
     </div>
   );
 }
