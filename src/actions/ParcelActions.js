@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const authHeader = {
   headers: {
-    'Authorization': 'Bearer ' + sessionStorage.token
+    'Authorization': 'Bearer ' + localStorage.token
   }
 };
 

@@ -28,8 +28,8 @@ export class LogInPage extends Component {
     };
     this.props.logIn(userInfo);
     this.setState({ showLoader: true });
-    this.props.history.push("/profile");
-  };
+    }
+
 
   render() {
     return (

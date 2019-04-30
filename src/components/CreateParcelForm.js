@@ -45,6 +45,8 @@ export class CreateParcelForm extends Component {
               name="destination"
               onChange={this.props.handleInputChange}
             />
+            <p className="create-rules">Parcel description, pickup location and destination should be at least five characters long</p>
+
           </div>
           <br />
           <Button

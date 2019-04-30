@@ -16,7 +16,7 @@ export class ProfilePage extends Component {
       <div>
         <Header home="Home" logout="Log out" />
         <div className="flex-container-profile">
-          {user ? <Profile profile={user} /> : <h3>Loading...</h3>}
+          <Profile />
           <Parcels />
         </div>
       </div>

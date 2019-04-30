@@ -10,7 +10,6 @@ import LogInPage from "../src/containers/LogInPage";
 import ProfilePage from "../src/containers/ProfilePage";
 import HomePage from "../src/components/HomePage";
 import Loader from "../src/components/Loader";
-import CreateParcelForm from "../src/components/CreateParcelForm";
 import ParcelTable from "../src/components/ParcelTable";
 import SingleParcel from "../src/components/SingleParcel";
 import Parcels from "../src/containers/Parcels";
@@ -97,6 +96,11 @@ describe("App", () => {
     .find("button")
     .first()
     .simulate("click");
+  });
+
+  it("single parcel form should render without crashing", () => {
+    const parcels = [{id: 1, destination: "Kampala", pickup_location: "Luweero"}];
+    mount(<ParcelTable parcels={parcels} />);
   });
 
   it("single parcel form should render without crashing", () => {

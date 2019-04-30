@@ -11,17 +11,21 @@ export class Parcels extends Component {
       description: "",
       pickupLocation: "",
       destination: "",
-      newParcel: false
+      allParcels: [],
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.createParcel = this.createParcel.bind(this);
   }
 
-  componentDidMount = () => {
+  componentDidMount(){
     setTimeout(() => {
       this.props.getAllParcels(localStorage.getItem('user_id'));
     }, 1000);
+  }
+
+  componentWillReceiveProps(newProps){
+    this.setState({allParcels: newProps.parcels});
   }
 
   handleInputChange = event => {
@@ -35,10 +39,8 @@ export class Parcels extends Component {
       destination: this.state.destination
     };
     this.props.createNewParcel(parcelInfo);
-    this.setState({
-        newParcel: true
-    })
-  };
+    this.props.getAllParcels(localStorage.getItem('user_id'));
+  }
 
   render() {
     return (
@@ -47,7 +49,7 @@ export class Parcels extends Component {
           handleInputChange={this.handleInputChange}
           createParcel={this.createParcel}
         />
-        <ParcelTable parcels={this.props.parcels} />
+        <ParcelTable parcels={this.state.allParcels} />
       </div>
     );
   }

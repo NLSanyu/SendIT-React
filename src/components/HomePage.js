@@ -6,7 +6,7 @@ export const HomePage = () => {
     <div>
       <Header home="Home" login="Log In" signup="Create an account" />
       <div className="home-image">
-        <img className="home-image" src="../assets/parcel.jpg" />
+        <img className="home-image" src="https://res.cloudinary.com/dnmzjr0a9/image/upload/v1556607734/SendIT/parcel_ilaa8f.jpg" />
       </div>
       <div className="home-info">
         <p className="info-title">
